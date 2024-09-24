@@ -16,26 +16,25 @@ import {
 
 const AboutPage = () => {
   const technologies = [
-    { icon: <SiJavascript />, name: "JavaScript" },
-    { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <SiTailwindcss />, name: "Tailwind" },
-    { icon: <SiHtml5 />, name: "HTML" },
-    { icon: <SiCss3 />, name: "CSS" },
-    { icon: <SiMui />, name: "MUI" },
-    { icon: <SiCsharp />, name: "C#" },
+    { icon: <SiJavascript />, name: "JavaScript", color: "#F0DB4F" },
+    { icon: <SiTypescript />, name: "TypeScript", color: "#007ACC" },
+    { icon: <SiTailwindcss />, name: "Tailwind", color: "#38B2AC" },
+    { icon: <SiHtml5 />, name: "HTML", color: "#E44D26" },
+    { icon: <SiCss3 />, name: "CSS", color: "#1572B6" },
+    { icon: <SiMui />, name: "MUI", color: "#1C7FB6" },
+    { icon: <SiCsharp />, name: "C#", color: "#68217A" },
   ];
 
   const tools = [
-    { icon: <SiFirebase />, name: "Firebase" },
-    { icon: <SiGithub />, name: "GitHub" },
-    { icon: <SiFigma />, name: "Figma" },
-    { icon: <SiReact />, name: "React" },
-    { icon: <SiGit />, name: "Git" },
+    { icon: <SiFirebase />, name: "Firebase", color: "#F58220" },
+    { icon: <SiGithub />, name: "GitHub", color: "#8892b0" },
+    { icon: <SiFigma />, name: "Figma", color: "#FFF" },
+    { icon: <SiReact />, name: "React", color: "#00D8FF" },
+    { icon: <SiGit />, name: "Git", color: "#F34F29" },
   ];
 
   return (
     <>
-      {" "}
       <div className="flex flex-col justify-center items-center w-screen h-screen">
         <div className="flex flex-row gap-2 items-center font-semibold w-[40rem] text-2xl text-textHighlight mb-4">
           <span className="text-greenHighlight font-semibold text-3xl ">#</span>
@@ -62,8 +61,8 @@ const AboutPage = () => {
             <br />
             <br />
             Today I'm living in{" "}
-            <span className="text-greenHighlight">Växjö</span>, together with my
-            partner <span className="text-greenHighlight">Ebba</span> and our
+            <span className="text-greenHighlight">Växjö</span>, with my partner{" "}
+            <span className="text-greenHighlight">Ebba</span> and our
             rambunctious Welsh Corgi Pembroke,{" "}
             <span className="text-greenHighlight">Budgie</span>.
           </div>
@@ -82,28 +81,37 @@ const AboutPage = () => {
 
         {/* Technologies & Tools */}
 
-        <div className="flex flex-row justify-between w-[40rem] h-[20rem] mt-4 rounded-lg  gap-4">
-          <div className="flex flex-row flex-wrap w-[20rem]">
-            <span>Technologies:</span>
-            {technologies.map((tech, idx) => (
-              <div
-                key={idx}
-                className="flex gap-2 items-center bg-[#282828]/50 w-[8rem] h-[2rem] rounded-md p-2"
-              >
-                <span className="text-greenHighlight">{tech.icon}</span>
-                <span className="text-textHighlight">{tech.name}</span>
-              </div>
-            ))}
+        <div className="flex flex-row justify-between w-[40rem] h-[13rem] mt-4 rounded-lg">
+          <div className=" flex-wrap w-[20rem]">
+            <span className="w-[20rem]">Technologies:</span>
+            <div className="flex flex-row justify-start flex-wrap w-19.5rem] gap-2">
+              {technologies.map((tech, idx) => (
+                <div
+                  key={idx}
+                  className="flex gap-2 items-center bg-[#282828]/50 w-[8rem] h-[2rem] rounded-md p-2"
+                >
+                  <span style={{ color: tech.color }}>{tech.icon}</span>
+                  <span className="text-textHighlight">{tech.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="w-1 h-auto bg-greenHighlight rounded-md"></div>
-          <div>
-            <span>Tools:</span>
-            {tools.map((tool, idx) => (
-              <div key={idx}>
-                <span className="text-greenHighlight">{tool.icon}</span>{" "}
-                <span className="text-textHighlight">{tool.name}</span>
-              </div>
-            ))}
+
+          <div className="w-1 h-auto bg-greenHighlight rounded-md m-6"></div>
+
+          <div className=" flex-wrap w-[20rem]">
+            <span className="w-[20rem]">Tools:</span>
+            <div className="flex flex-row justify-start flex-wrap w-[19.5rem] gap-2">
+              {tools.map((tools, idx) => (
+                <div
+                  key={idx}
+                  className="flex gap-2 items-center bg-[#282828]/50 w-[8rem] h-[2rem] rounded-md p-2"
+                >
+                  <span style={{ color: tools.color }}>{tools.icon}</span>
+                  <span className="text-textHighlight">{tools.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

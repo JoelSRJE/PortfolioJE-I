@@ -23,7 +23,7 @@ const HomePage = () => {
           <span className="text-greenHighlight">Frontend Development</span>.
         </span>
         <button className="border-2 border-greenHighlight px-2 py-1 w-[8.5rem] rounded-md mt-4">
-          Get in touch!
+          <a href="#contact">Get in touch!</a>
         </button>{" "}
         <div className="relative top-[24rem] m-auto flex justify-center items-center w-[1.2rem] h-[2rem] rounded-md border-2 border-textColor">
           <div className="relative -top-[6px] w-[4px] h-[4px] rounded-full bg-textColor"></div>
