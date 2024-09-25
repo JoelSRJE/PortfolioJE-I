@@ -2,7 +2,7 @@
 
 TODO:
 
-- Finish the design
+- Finish the design & make responsive
 - Write functions for certain things
 - Connect to Firebase
 
