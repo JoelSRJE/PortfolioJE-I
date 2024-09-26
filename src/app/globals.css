@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a192f;
-  --foreground: #171717;
+  --background: #051630;
+  --foreground: #aaa4a4;
   --greenHighlight: #18bf7e;
-  --textHighlight: #ccd6f6;
+  --textHighlight: #c2cdf2;
   --textColor: #8892b0;
   scroll-behavior: smooth;
 }
 
+html,
 body {
   box-sizing: border-box;
   padding: 0;

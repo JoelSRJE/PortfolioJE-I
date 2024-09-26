@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/app/components/Footer/footer";
 import React, { useState } from "react";
 
 const ContactPage = () => {
@@ -10,10 +9,21 @@ const ContactPage = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center w-screen h-screen">
-        <div className="flex flex-row gap-2 items-center font-semibold w-[30rem] text-2xl text-textHighlight mb-4">
+        <div className="flex flex-row gap-2 items-center font-semibold w-[30rem] text-2xl text-textHighlight">
           <span className="text-greenHighlight font-semibold text-3xl ">#</span>
           Contact Page <div className="h-1 w-[18rem] bg-greenHighlight"></div>
         </div>
+
+        <span className="flex flex-col max-w-[30rem] p-4 ">
+          <span className="text-greenHighlight">Currently:</span>
+          I'm looking for an opportunity to acquire a "LIA"-position to further
+          my knowledge and skills.
+          <br />
+          <br />
+          Start date:
+          <span className="text-textHighlight">28 Oct 2024 - 24 Jan 2025</span>
+        </span>
+        <div className="h-1 w-[30rem] bg-greenHighlight mb-4"></div>
 
         {/* Input fields */}
         <div className="flex flex-col gap-4 justify-center">
@@ -49,7 +59,6 @@ const ContactPage = () => {
           </button>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
