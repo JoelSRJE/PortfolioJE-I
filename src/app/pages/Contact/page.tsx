@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/app/components/Footer/footer";
 import React, { useState } from "react";
 
 const ContactPage = () => {
@@ -15,20 +16,20 @@ const ContactPage = () => {
         </div>
 
         {/* Input fields */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 justify-center">
           <div className="flex flex-row gap-4">
             <div className="flex flex-col">
               <span>Name</span>
               <input
-                className="h-8 w-auto rounded-md p-2 border-2 border-greenHighlight bg-background"
-                placeholder="John Smith"
+                className="h-12 w-auto rounded-md p-2 border-2 border-greenHighlight bg-background"
+                placeholder="ex John Doe"
               />
             </div>
             <div className="flex flex-col">
               <span>Email</span>
               <input
-                className="h-8 w-auto rounded-md p-2 border-2 border-greenHighlight bg-background"
-                placeholder="John@gmail.com"
+                className="h-12 w-auto rounded-md p-2 border-2 border-greenHighlight bg-background"
+                placeholder="ex JohnDoe@gmail.com"
               />
             </div>
           </div>
@@ -37,17 +38,18 @@ const ContactPage = () => {
             <span>Message</span>
             <textarea
               cols={4}
-              rows={5}
+              rows={6}
               className=" w-auto rounded-md p-2 resize-none border-2 border-greenHighlight bg-background"
               placeholder="Hello..."
             />
           </div>
 
-          <button className="text-greenHighlight w-[8rem] rounded-md border-2 border-transparent hover:border-2 hover:border-greenHighlight">
-            Submit
+          <button className="relative m-auto text-greenHighlight w-[8rem] h-[2.5rem] rounded-md border-2 border-transparent hover:border-2 hover:border-greenHighlight">
+            Get in touch
           </button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

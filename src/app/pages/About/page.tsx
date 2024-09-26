@@ -73,7 +73,7 @@ const AboutPage = () => {
               alt="family"
               className="border-2 border-t-greenHighlight border-l-greenHighlight border-r-greenHighlight rounded-t-lg max-h-[24rem]"
             />
-            <div className="flex justify-center p-2 bg-[#282828]/50 border-2 border-greenHighlight mt-[-0.1rem]">
+            <div className="flex justify-center p-2 bg-[#282828]/50 border-2 border-greenHighlight mt-[-0.1rem] rounded-b-lg">
               <span className="text-textHighlight">Me, Budgie And Ebba</span>
             </div>
           </div>

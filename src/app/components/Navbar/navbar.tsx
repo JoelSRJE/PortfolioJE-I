@@ -22,17 +22,12 @@ const PortNavbar = () => {
     {
       tag: <FaGithub />,
       name: "GitHub",
-      link: "/",
+      link: "https://github.com/JoelSRJE",
     },
     {
       tag: <FaLinkedin />,
       name: "LinkedIn",
-      link: "/",
-    },
-    {
-      tag: <FaInstagram />,
-      name: "Instagram",
-      link: "/",
+      link: "https://www.linkedin.com/in/joel-jensen-ericson-a77aa2295/",
     },
   ];
 
@@ -63,24 +58,27 @@ const PortNavbar = () => {
         </div>
         <div className="absolute left-24 top-8 [ flex gap-4 ]">
           {socialButtons.map((button, idx) => (
-            <button className="text-textColor scale-[1.4] hover:text-greenHighlight">
+            <a
+              href={button.link}
+              className="text-textColor scale-[1.4] hover:text-greenHighlight"
+            >
               {button.tag}
-            </button>
+            </a>
           ))}
         </div>
       </div>
 
       <div className="relative flex gap-4 right-[10rem]">
-        {navButtons.map((button, idx) => (
+        {navButtons.map((item, idx) => (
           <a
             key={idx}
-            href={button.link}
+            href={item.link}
             className="text-md  hover:text-greenHighlight"
           >
             <span className="relative right-0.5 text-greenHighlight">
-              {button.tag}
+              {item.tag}
             </span>
-            {button.name}
+            {item.name}
           </a>
         ))}
 
