@@ -22,7 +22,7 @@ const ContactPage = () => {
     <>
       <div className="flex flex-col justify-center items-center w-screen h-screen">
         <div className="flex flex-row gap-2 items-center font-semibold w-[30rem] text-2xl text-textHighlight">
-          <span className="text-greenHighlight font-semibold text-3xl drop-shadow-2xl ">
+          <span className="text-greenHighlight font-semibold text-3xl drop-shadow-2xl">
             #
           </span>
           Contact Page{" "}
