@@ -6,16 +6,17 @@ import AboutPage from "./pages/About/page";
 import ProjectPage from "./pages/Projects/page";
 import ContactPage from "./pages/Contact/page";
 import Footer from "./components/Footer/footer";
+import "./globals.css";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
+      const x = event.clientX;
+      const y = event.clientY;
+
+      setMousePosition({ x, y });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -29,7 +30,7 @@ export default function Home() {
     <div className="flex flex-col items-center w-full h-full relative">
       {/* Ficklampa */}
       <span
-        className="absolute pointer-events-none rounded-full bg-white opacity-10"
+        className="absolute pointer-events-none rounded-full bg-white opacity-20"
         style={{
           width: "100px",
           height: "100px",
@@ -39,12 +40,13 @@ export default function Home() {
           boxShadow: "0 0 200px 200px rgba(45,90,255,0.20)",
           position: "fixed",
           pointerEvents: "none",
+          transition: "0.5s top 0s left 0s",
           zIndex: 10,
         }}
       ></span>
 
       {/* Overlay för bakgrund */}
-      <div className="absolute w-full h-full bg-black opacity-30 z-0" />
+      <div className="absolute w-full h-full bg-black opacity-20 z-0" />
 
       <PortNavbar />
 
@@ -54,7 +56,7 @@ export default function Home() {
         </section>
 
         <section id="about" className="min-h-screen">
-          <AboutPage />
+          <AboutPage mousePosition={mousePosition} />
         </section>
 
         <section id="projects" className="min-h-screen">

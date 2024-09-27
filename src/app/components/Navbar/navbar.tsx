@@ -36,7 +36,7 @@ const PortNavbar = () => {
   };
 
   return (
-    <div className="flex justify-between text-center w-screen h-auto p-4  mb-12 shadow-md">
+    <div className="flex justify-between text-center w-screen h-auto p-4  mb-12 shadow-lg">
       <div className="ml-2">
         <div style={{ transform: "rotate(45deg)" }}>
           <div className="flex justify-center items-center w-12 h-12 border-2 border-greenHighlight">
@@ -59,6 +59,7 @@ const PortNavbar = () => {
         <div className="absolute left-24 top-8 [ flex gap-4 ]">
           {socialButtons.map((button, idx) => (
             <a
+              key={idx}
               href={button.link}
               className="text-textColor scale-[1.4] hover:text-greenHighlight"
             >

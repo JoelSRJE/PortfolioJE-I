@@ -5,13 +5,15 @@ const HomePage = () => {
     <div className="flex justify-center items-center w-screen h-[90vh]">
       <div className="flex flex-col w-auto">
         <span className="text-greenHighlight">Hello there,</span>
-        <span className="text-textHighlight w-auto text-4xl font-bold">
+        <span className="text-textHighlight w-auto text-4xl font-bold drop-shadow-2xl">
           I'm Joel Jensen Ericson
         </span>
-        <div className="w-[29rem] border-[1px] border-greenHighlight"> </div>
-        <span className="text-[1.6rem] font-bold">
+        <div className="w-[29rem] border-[1px] border-greenHighlight rounded-lg" />
+        <span className="text-[1.6rem] font-bold drop-shadow-2xl">
           And I’m an aspiring{" "}
-          <span className="text-greenHighlight">Frontend dev</span>
+          <span className="text-greenHighlight drop-shadow-2xl">
+            Frontend dev
+          </span>
         </span>
         <span className="">
           Who began his coding journey about a year ago,
@@ -22,11 +24,12 @@ const HomePage = () => {
           studying{" "}
           <span className="text-greenHighlight">Frontend Development</span>.
         </span>
-        <button className="border-2 border-greenHighlight px-2 py-1 w-[8.5rem] rounded-md mt-4">
+        <button className="border-2 border-greenHighlight px-2 py-1 w-[8.5rem] rounded-md mt-4 mb-[10rem]">
           <a href="#contact">Get in touch!</a>
         </button>{" "}
-        <div className="relative top-[24rem] m-auto flex justify-center items-center w-[1.2rem] h-[2rem] rounded-md border-2 border-textColor">
-          <div className="relative -top-[6px] w-[4px] h-[4px] rounded-full bg-textColor"></div>
+        <div className="flex flex-col justify-center items-center mt-24 w-[auto] h-[20rem]">
+          <span className="animate-pulse text-textHighlight">Scroll</span>
+          <div className=" w-[1px] min-h-[20rem] border-[1px] border-greenHighlight m-0 rounded-lg" />
         </div>
       </div>
     </div>
