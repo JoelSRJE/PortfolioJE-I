@@ -1,15 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import {
-  FaLock,
-  FaLockOpen,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaLock, FaLockOpen, FaGithub, FaLinkedin } from "react-icons/fa6";
+import SignInModal from "../signin/signinmodal";
 
 const PortNavbar = () => {
+  const [openSignInModal, setOpenSignInModal] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const navButtons = [
     { tag: "#", name: "Home", link: "#home" },
@@ -30,6 +27,11 @@ const PortNavbar = () => {
       link: "https://www.linkedin.com/in/joel-jensen-ericson-a77aa2295/",
     },
   ];
+
+  const openSignInModalHandler = () => {
+    setOpenSignInModal(!openSignInModal);
+    setMessage(null);
+  };
 
   const handleLogin = () => {
     setIsLoggedIn(!isLoggedIn);
@@ -83,13 +85,22 @@ const PortNavbar = () => {
           </a>
         ))}
 
-        <button onClick={() => handleLogin()} className="relative left-[8rem]">
+        <button
+          onClick={openSignInModalHandler}
+          className="relative left-[8rem]"
+        >
           {isLoggedIn ? (
             <FaLockOpen className="text-textColor" />
           ) : (
             <FaLock className="text-greenHighlight" />
           )}
         </button>
+        {openSignInModal && (
+          <SignInModal
+            openModal={openSignInModal}
+            onClose={openSignInModalHandler}
+          />
+        )}
       </div>
     </div>
   );

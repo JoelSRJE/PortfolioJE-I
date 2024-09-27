@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full h-full relative">
+    <div className="flex flex-col items-center w-full h-full relative gap-[15rem]">
       {/* Ficklampa */}
       <span
         className="absolute pointer-events-none rounded-full bg-white opacity-20"

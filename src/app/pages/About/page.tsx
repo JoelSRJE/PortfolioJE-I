@@ -112,13 +112,12 @@ const AboutPage = ({ mousePosition }: { mousePosition: MousePosition }) => {
           <span className="text-greenHighlight font-semibold text-3xl  ">
             #
           </span>
-          About page{" "}
-          <div className="h-1 w-[20rem] bg-greenHighlight rounded-lg"></div>
+          About <div className="h-1 w-4/5  bg-greenHighlight rounded-lg"></div>
         </div>
         <div className="flex flex-row gap-2">
           <div className="w-[20rem]">
             Hello! My name is{" "}
-            <span className="text-greenHighlight font-semibold italic">
+            <span className="text-greenHighlight font-semibold">
               Joel Jensen Ericson
             </span>{" "}
             and I began my journey in the art of messing around with the web
@@ -152,9 +151,9 @@ const AboutPage = ({ mousePosition }: { mousePosition: MousePosition }) => {
             <img
               src="Us.jpg"
               alt="family"
-              className="border-2 border-t-greenHighlight border-l-greenHighlight border-r-greenHighlight rounded-t-lg max-h-[24rem]"
+              className="border-2 border-t-greenHighlight border-l-greenHighlight border-r-greenHighlight rounded-t-lg max-h-[24rem] shadow-2xl"
             />
-            <div className="flex justify-center p-2 bg-[#282828]/50 border-2 border-greenHighlight mt-[-0.1rem] rounded-b-lg">
+            <div className="flex justify-center p-2 bg-[#282828]/20 border-2 border-greenHighlight mt-[-0.1rem] rounded-b-lg shadow-2xl">
               <span className="text-textHighlight">Me, Budgie And Ebba</span>
             </div>
           </div>
@@ -215,18 +214,18 @@ const AboutPage = ({ mousePosition }: { mousePosition: MousePosition }) => {
                   </div>
                   <div>{exp.companyDesc}</div>
                   <div className="absolute">
-                    <div className=" flex justify-center -rotate-90 text-textHighlight transform -translate-y-28 -translate-x-28">
+                    <div className=" flex justify-center -rotate-90 text-textHighlight text-sm transform -translate-y-28 -translate-x-24">
                       {exp.date}
                     </div>
                   </div>
                 </div>
 
                 {/* divider */}
-                <div className="flex  items-center p-4 w-auto ">
+                <div className="flex items-center p-4 w-auto gap-2 ">
                   {Array.from({ length: numberofDividers }, (_, idx) => (
                     <div
                       key={idx}
-                      className="h-1 w-5 bg-greenHighlight rounded-lg mr-2 shadow-2xl"
+                      className="h-1 w-5 bg-greenHighlight rounded-lg  shadow-2xl"
                     ></div>
                   ))}
                 </div>
@@ -234,10 +233,9 @@ const AboutPage = ({ mousePosition }: { mousePosition: MousePosition }) => {
                 {/* My position */}
                 <div className="flex flex-col w-[20rem] h-auto p-2 bg-[#282828]/10 shadow-2xl rounded-lg gap-2 relative">
                   <div className="card absolute inset-0 bg-[#18bf7e]/80 rounded-lg "></div>
-                  <div className="text-center text-textHighlight">
+                  <div className="text-center text-textHighlight border-b-2 border-greenHighlight">
                     {exp.position}
                   </div>
-                  <div className="h-1 w-auto bg-greenHighlight rounded-lg"></div>
                   <div className="">{exp.workDesc}</div>
                   <div className="flex flex-col gap-4 ">
                     {exp.tools.map((worktool, idx) => (

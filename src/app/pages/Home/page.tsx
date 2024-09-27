@@ -24,12 +24,12 @@ const HomePage = () => {
           studying{" "}
           <span className="text-greenHighlight">Frontend Development</span>.
         </span>
-        <button className="border-2 border-greenHighlight px-2 py-1 w-[8.5rem] rounded-md mt-4 mb-[10rem]">
+        <button className="border-2 border-greenHighlight px-2 py-1 w-[8.5rem] rounded-md mt-4 mb-[2rem] shadow-2xl">
           <a href="#contact">Get in touch!</a>
         </button>{" "}
         <div className="flex flex-col justify-center items-center mt-24 w-[auto] h-[20rem]">
           <span className="animate-pulse text-textHighlight">Scroll</span>
-          <div className=" w-[1px] min-h-[20rem] border-[1px] border-greenHighlight m-0 rounded-lg" />
+          <div className=" w-[1px] min-h-[20rem] border-[1px] border-greenHighlight m-0 rounded-lg animate-pulse" />
         </div>
       </div>
     </div>

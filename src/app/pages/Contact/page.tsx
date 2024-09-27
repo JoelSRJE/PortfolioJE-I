@@ -25,8 +25,7 @@ const ContactPage = () => {
           <span className="text-greenHighlight font-semibold text-3xl drop-shadow-2xl">
             #
           </span>
-          Contact Page{" "}
-          <div className="h-1 w-[18rem] bg-greenHighlight rounded-lg" />
+          Contact <div className="h-1 w-4/5 bg-greenHighlight rounded-lg" />
         </div>
 
         <div className=" w-[30rem] p-4 ">
